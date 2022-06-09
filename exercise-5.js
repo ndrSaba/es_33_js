@@ -1,8 +1,12 @@
 function firstUncompletedNote(notes) {
-  return notes.map(
-    ({ id, description, todos }) => ({ id, description, todos: todos.find(nota => !nota.done) })
+  return notes.map(({
+    id, description, todos
+  }) => ({
+    id, description, todos: todos.find(nota => nota.done == false)
+  })
   )
 }
+
 
 const notes = [
   {
